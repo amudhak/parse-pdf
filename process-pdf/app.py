@@ -13,8 +13,8 @@ llm = Ollama(model="llama3")
 def aiPost(query, context):
     try:
         response = llm.invoke(query + context)  # Assuming llm.invoke can take a context parameter
-        print(response)
-        answer = {response}
+        # print(response)
+        answer = response
     except Exception as e:  # Generic error handling, consider specifying exceptions
         print(f"Error invoking model: {e}")
         return {"error": "Failed to process query"}, 500
