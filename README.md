@@ -32,13 +32,10 @@ python3 main.py
 
 ### Notes and Updates to be made
 
-Currently, PDF must be downloaded and added to the PDF_Files folder before referencing. Should be able to download PDF directly through the program and parse with the link.
+Start with templated JSON file.
 
-JSON file is getting overwritten.
+Currently, PDF must be downloaded and added to the PDF_Files folder before referencing. Should be able to download PDF directly through the program and parse with the link.
 
 Change how context is provided to the LLM.
 
-Be able to update the article number and title automatically instead of manually.
-
 Speed up performance. As of now, the program runs rather slowly.
-
