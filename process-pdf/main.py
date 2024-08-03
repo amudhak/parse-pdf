@@ -51,13 +51,13 @@ def main(pdf_path, json_filename, index):
 
 # Run Program
 if __name__ == "__main__":
-    directory = "PDF_Files"
+    directory = "Files_To_Process"
     index = 1
     for filename in os.listdir(directory):
         f = os.path.join(directory, filename)
         if os.path.isfile(f):   # Check if is file
-            pdf_path = f"PDF_Files/file{index}.pdf"
-            # pdf_path = "PDF_Files/file.pdf" # Update pdf file link here
+            pdf_path = f"{directory}/file{index}.pdf"
             json_filename = "Output.json"
             main(pdf_path, json_filename, index)
+            os.replace(f"{directory}/file{index}.pdf", f"Processed_Files/file{index}.pdf")
             index += 1
