@@ -15,9 +15,9 @@ def process_query(query, context):
     return response
 
 def process_text(text):
-    title = process_query("Return the given title of the article without code block. Do not include any explanation: ", text)
-    summary = process_query("Write a summary from the given text without code block. Do not include any explanation: ", text)
-    key_points = process_query("Return some key points from the given text without code block. Do not include any explanation: ", text)
+    title = process_query("Return the given title of the article. Do not include any information other than text from the provided text: ", text)
+    summary = process_query("Write a summary from the given text. Do not include any information other than text from the provided text: ", text)
+    key_points = process_query("Return some key points from the given text. Do not include any information other than text from the provided text. This should be returned as a list of strings: ", text)
     return {
         "title": title,
         "summary": summary,
